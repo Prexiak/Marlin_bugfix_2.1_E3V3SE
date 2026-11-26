@@ -1169,9 +1169,9 @@
  * Enable/disable and set parameters with G-code M493 and M494.
  * See ft_types.h for named values used by FTM options.
  */
-#define FT_MOTION
-#if ENABLED(FT_MOTION)
-  #define FTM_IS_DEFAULT_MOTION// Use FT Motion as the factory default?
+//#define FT_MOTION
+//#if ENABLED(FT_MOTION)
+  //#define FTM_IS_DEFAULT_MOTION// Use FT Motion as the factory default?
   //#define FT_MOTION_MENU                      // Provide a MarlinUI menu to set M493 and M494 parameters
 
   //#define NO_STANDARD_MOTION                  // Disable the standard motion system entirely to save Flash and RAM
@@ -2521,7 +2521,7 @@
  *
  * See https://marlinfw.org/docs/features/lin_advance.html for full instructions.
  */
-//#define LIN_ADVANCE
+#define LIN_ADVANCE
 
 #if ANY(LIN_ADVANCE, FT_MOTION)
   #if ENABLED(DISTINCT_E_FACTORS)
