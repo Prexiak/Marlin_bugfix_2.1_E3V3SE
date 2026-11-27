@@ -56,7 +56,7 @@ on:
       ft_motion:
         description: "FT_MOTION (configure with M493; disables legacy shaping menu)"
         type: boolean
-        default: true
+        default: false
       meatpack:
         description: "MEATPACK_ON_SERIAL_PORT_1 (host transmission compression)"
         type: boolean
