@@ -96,6 +96,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Fetch upstream
+        run: |
+          git remote add upstream https://github.com/MarlinFirmware/Marlin.git
+          git fetch upstream bugfix-2.1.x
+
+      - name: Check configuration profile
+        run: |
+          python buildroot/share/e3v3se/config_profile.py --profile c13_sd check
 
       - name: Setup Python
         uses: actions/setup-python@v5
